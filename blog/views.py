@@ -64,7 +64,7 @@ def edit_posts(request, pk):
         post = get_object_or_404(Post, pk=pk)
         categories = Category.objects.all()
     else:
-        return create_post(request)
+        return create_posts(request)
 
     return render(request, 'edit.html', {
         'post': post,
